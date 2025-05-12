@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>이미지 스크리퍼</title>
+    <link rel="stylesheet" href="style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <body>
+    <div class="container">
+      <header class="header">
+        <img src="icons/icon48.png" alt="icon" />
+        <h1 class="title">이미지 스크리퍼</h1>
+      </header>
+
+      <section class="action-buttons">
+        <button id="fetchImages" class="btn btn-primary">
+          이미지 긁어오기
+        </button>
+        <button id="saveSelected" class="btn btn-secondary" disabled>
+          선택한 이미지 저장
+        </button>
+        <button id="selectAll" class="btn btn-secondary" disabled>
+          전체 선택
+        </button>
+        <button id="deselectAll" class="btn btn-secondary" disabled>
+          전체 해제
+        </button>
+      </section>
+
+      <section class="settings">
+          <div class="filename-setting">
+            <span class="setting-label">파일명 설정:</span>
+            <button id="toggleAltText" class="toggle-btn active">
+              alt 속성
+            </button>
+            <div id="customNameContainer">
+              <input
+                type="text"
+                id="customNamePrefix"
+                class="input-text"
+                placeholder="파일명 접두사"
+              />
+            </div>
+          </div>
+
+          <div class="filter-settings">
+            <label class="filter-input">
+              <span>너비 (px)</span>
+              <input
+                class="sizefilter-input"
+                type="number"
+                id="minWidth"
+                value="0"
+                placeholder="최소 너비"
+              />
+            </label>
+            <label class="filter-input">
+              <span>높이 (px)</span>
+              <input
+                class="sizefilter-input"
+                type="number"
+                id="minHeight"
+                value="0"
+                placeholder="최소 높이"
+              />
+            </label>
+          </div>
+        </div>
+      </section>
+
+      <section class="ext-filters">
+        <span class="filter-label">확장자 필터:</span>
+        <div class="ext-button-group" id="extButtons"></div>
+      </section>
+
+      <section class="status-section">
+        <div id="status" class="status-text"></div>
+      </section>
+
+      <section class="image-grid" id="imageContainer"></section>
+    </div>
+    <script src="popup.js"></script>
+  </body>
+</html>

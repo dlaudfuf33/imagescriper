@@ -1,0 +1,24 @@
+{
+  "manifest_version": 3,
+  "name": "이미지 선택 저장기",
+  "version": "1.0",
+  "description": "웹페이지의 모든 이미지를 가져와 선택하여 저장할 수 있는 확장 프로그램",
+  "permissions": ["activeTab", "downloads", "scripting"],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  }
+}
